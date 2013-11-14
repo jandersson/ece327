@@ -1,0 +1,34 @@
+ncelab(64): 08.20-s029: (c) Copyright 1995-2011 Cadence Design Systems, Inc.
+define worklib /cadence/IUS/tools/inca/files/worklib
+|
+ncelab: *W,DLCPTH (./cds.lib,11): cds.lib Permission denied '/cadence/IUS/tools/inca/files/worklib' (cds.lib command ignored).
+TOOL:	ncelab(64)	08.20-s029: Started on Oct 29, 2013 at 15:46:39 CDT
+ncelab
+    -mess
+    -access -rwc
+    worklib.excess3_tb
+
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+define worklib /cadence/IUS/tools/inca/files/worklib
+|
+ncvlog_cg: *W,DLCPTH (./cds.lib,11): cds.lib Permission denied '/cadence/IUS/tools/inca/files/worklib' (cds.lib command ignored).
+		worklib.excess3:module <0x6f9c38a2>
+			streams:  18, words:  6980
+		worklib.excess3_tb:module <0x40f774c0>
+			streams:   4, words:  3476
+	Loading native compiled code:     .................... Done
+	Building instance specific data structures.
+	Design hierarchy summary:
+		             Instances  Unique
+		Modules:             2       2
+		Registers:           6       6
+		Scalar wires:        1       -
+		Vectored wires:      2       -
+		Always blocks:       2       2
+		Initial blocks:      4       4
+		Pseudo assignments:  1       1
+	Writing initial simulation snapshot: worklib.excess3_tb:module
+TOOL:	ncelab(64)	08.20-s029: Exiting on Oct 29, 2013 at 15:46:40 CDT  (total: 00:00:01)

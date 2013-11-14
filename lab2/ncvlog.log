@@ -1,0 +1,16 @@
+ncvlog(64): 08.20-s029: (c) Copyright 1995-2011 Cadence Design Systems, Inc.
+ncvlog: *W,MISCLA: a -CDSLIB option was found with no argument, option ignored.
+TOOL:	ncvlog(64)	08.20-s029: Started on Nov 12, 2013 at 16:03:45 CST
+ncvlog
+    -mess
+    -cdslib
+    -work worklib
+    -hdlvar ./hdl.var
+    bitcount_struct_tb.v
+
+file: bitcount_struct_tb.v
+	module worklib.halfadd_tb
+		errors: 0, warnings: 0
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
+TOOL:	ncvlog(64)	08.20-s029: Exiting on Nov 12, 2013 at 16:03:46 CST  (total: 00:00:01)

@@ -1,0 +1,32 @@
+ncvlog(64): 08.20-s029: (c) Copyright 1995-2011 Cadence Design Systems, Inc.
+ncvlog: *W,MISCLA: a -CDSLIB option was found with no argument, option ignored.
+define worklib /cadence/IUS/tools/inca/files/worklib
+|
+ncvlog: *W,DLCPTH (./cds.lib,11): cds.lib Permission denied '/cadence/IUS/tools/inca/files/worklib' (cds.lib command ignored).
+TOOL:	ncvlog(64)	08.20-s029: Started on Oct 29, 2013 at 16:43:14 CDT
+ncvlog
+    -mess
+    -cdslib
+    -work worklib
+    ./cds.lib
+    -hdlvar ./hdl.var
+    excess3_tb.v
+
+file: ./cds.lib
+# Soft include definitions for each INCA option
+|
+ncvlog: *E,EXPMPA (./cds.lib,1|0): expecting the keyword 'module', 'macromodule' or 'primitive'[A.1].
+SOFTINCLUDE ../../affirma_ams/etc/connect_lib/cds.lib
+          |
+ncvlog: *E,EXPSMC (./cds.lib,10|10): expecting a semicolon (';') [12.1(IEEE)].
+file: excess3_tb.v
+`timescale 1ns/1ns
+                 |
+ncvlog: *W,TMSERX (excess3_tb.v,2|17): `timescale must be used outside of design units; directive ignored [19.8(IEEE Std 1364-2005)].
+	module worklib.libraries
+		errors: 1, warnings: 1
+	module worklib.excess3_tb
+		errors: 0, warnings: 0
+	Total errors/warnings found outside modules and primitives:
+		errors: 1, warnings: 2
+TOOL:	ncvlog(64)	08.20-s029: Exiting on Oct 29, 2013 at 16:43:14 CDT  (total: 00:00:00)

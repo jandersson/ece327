@@ -1,0 +1,12 @@
+ncsim(64): 08.20-s029: (c) Copyright 1995-2011 Cadence Design Systems, Inc.
+include $CDS_INST_DIR/tools/inca/files/hdl.var
+|
+ncsim: *W,DLHPTH (./hdl.var,2): hdl.var invalid path '/cadence/tools/inca/files/hdl.var' (hdl.var command ignored).
+TOOL:	ncsim(64)	08.20-s029: Started on Nov 14, 2013 at 08:55:32 CST
+ncsim
+    -gui
+    -MESSAGES
+    worklib.excess3_
+
+ncsim: *F,NOSNAP: Snapshot 'worklib.excess3_' does not exist in the libraries.
+TOOL:	ncsim(64)	08.20-s029: Exiting on Nov 14, 2013 at 08:55:33 CST  (total: 00:00:01)

@@ -1,0 +1,418 @@
+hal: Options:   -cdslib /ugrad/jonas/Documents/ece327/lab3/cds.lib -logfile hal.log /ugrad/jonas/Documents/ece327/lab3/excess3.v /ugrad/jonas/Documents/ece327/lab3/excess3_tb.v.
+hal: Workspace: /ugrad/jonas/Documents/ece327/lab3.
+hal: Date: Fri Oct 25 12:04:13 CDT 2013.
+hal: Running on design source files.....
+hal: *M,_SCOPE: __dummy_top
+hal: Snapshot:  worklib.testbench:v.
+hal: *M,_SCOPE: __dummy_top
+halcheck: *M,_SCOPE: testbench
+halcheck: *N,CDNOTE (./excess3_tb.v,2|0): The compiler directive '`timescale' is used in the RTL.
+halcheck: *W,CTLCHR (./excess3_tb.v,10|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3_tb.v,11|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3_tb.v,12|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3_tb.v,13|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3_tb.v,14|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3_tb.v,17|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3_tb.v,23|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3_tb.v,24|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3_tb.v,25|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3_tb.v,26|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3_tb.v,27|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3_tb.v,28|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3_tb.v,29|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3_tb.v,32|0): HDL source line contains one or more control characters.
+halcheck: *W,DIFFMN (./excess3_tb.v,3|0): Module name 'testbench' differs from file name 'excess3_tb.v'.
+halcheck: *W,NEEDIO (./excess3_tb.v,3|0): Top-level module 'testbench' has no inputs/outputs/inouts.
+@:testbench testbench
+halcheck: *W,UNCONN (./excess3_tb.v,9|0): Output port 'overflow' defined in design-unit 'excess3' is not connected in its instance 'DUT'.
+@:overflow testbench.DUT
+@:DUT 
+halcheck: *W,STYVAL (./excess3_tb.v,5|0): Numeric value '3' used for identifier 'the_output'. Use constants to avoid portability issues.
+halcheck: *W,STYVAL (./excess3_tb.v,4|0): Numeric value '3' used for identifier 'the_input'. Use constants to avoid portability issues.
+halcheck: *W,EVTRIG (./excess3_tb.v,16|0): Always block with no event trigger at the start of the block in module 'testbench'.
+halcheck: *W,NOBLKN (./excess3_tb.v,19|0): Each block should be labeled with a meaningful name.
+halcheck: *W,IMPDTC (./excess3_tb.v,25|0): Expression '0' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit testbench.
+halcheck: *W,INTTOB (./excess3_tb.v,25|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit testbench.
+halcheck: *W,TRUNCZ (./excess3_tb.v,25|0): Truncation in constant conversion without a loss of bits in module/design-unit testbench.
+halcheck: *W,IMPDTC (./excess3_tb.v,26|0): Expression 'k' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit testbench.
+halcheck: *W,UEASTR (./excess3_tb.v,26|0): Unequal length operands in assignment in module/design-unit testbench. Length of RHS is greater than LHS.
+halcheck: (./excess3_tb.v,26): LHS 'the_input' (unsigned) - 4 bit(s), RHS 'k' (signed) - 32 bit(s). 28 most significant bit(s) will be lost.
+halcheck: *W,BADSYS (./excess3_tb.v,27|0): System task $display in module 'testbench' is ignored.
+halcheck: *W,IMPDTC (./excess3_tb.v,28|0): Expression '1' implicitly converted to type 'unsigned' from type 'signed' in module/design-unit testbench.
+halcheck: *W,INTTOB (./excess3_tb.v,28|0): Assigning a 0 or 1 (32 bits) to a single-bit variable in module/design-unit testbench.
+halcheck: *W,TRUNCZ (./excess3_tb.v,28|0): Truncation in constant conversion without a loss of bits in module/design-unit testbench.
+halcheck: *W,BADSYS (./excess3_tb.v,32|0): System task $finish in module 'testbench' is ignored.
+halcheck: *N,IDLENG (./excess3_tb.v,9|0): Identifier name 'DUT' is not of appropriate length (4 to 16 characters).
+halcheck: *W,LCVARN (./excess3_tb.v,9|0): Module instance name 'DUT' uses uppercase characters.
+halcheck: *M,_SCOPE: testbench.DUT
+halcheck: *N,CDNOTE (./excess3.v,1|0): The compiler directive '`timescale' is used in the RTL.
+halcheck: *W,CTLCHR (./excess3.v,8|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,9|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,10|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,11|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,12|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,13|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,21|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,23|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,24|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,25|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,26|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,27|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,28|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,29|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,30|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,31|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,32|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,33|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,34|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,35|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,37|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,38|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,39|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,40|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,41|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,42|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,43|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,44|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,45|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,47|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,48|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,49|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,50|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,51|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,53|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,56|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,57|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,58|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,59|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,60|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,61|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,62|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,63|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,64|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,65|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,67|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,68|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,69|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,70|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,71|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,72|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,73|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,74|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,75|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,76|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,77|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,78|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,79|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,80|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,81|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,82|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,83|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,84|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,85|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,86|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,87|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,88|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,91|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,92|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,93|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,94|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,95|0): HDL source line contains one or more control characters.
+halcheck: *W,CTLCHR (./excess3.v,96|0): HDL source line contains one or more control characters.
+halcheck: *N,PRTCNT (./excess3.v,2|0): Module/Entity 'excess3' contains '5' ports.
+halcheck: (./excess3.v,2): Number of Input ports: 3.
+halcheck: (./excess3.v,2): Number of Output ports: 2.
+halcheck: *W,STYVAL (./excess3.v,4|0): Numeric value '3' used for identifier 'stream_in'. Use constants to avoid portability issues.
+halcheck: *N,DECLIN (./excess3.v,5|0): Use a separate line for each HDL declaration.
+halcheck: *W,STYVAL (./excess3.v,6|0): Numeric value '3' used for identifier 'e3_out'. Use constants to avoid portability issues.
+halcheck: *W,STYVAL (./excess3.v,17|0): Numeric value '3' used for identifier 'e3_out'. Use constants to avoid portability issues.
+halcheck: *W,STYVAL (./excess3.v,14|0): Numeric value '2' used for identifier 'state'. Use constants to avoid portability issues.
+halcheck: *W,STYVAL (./excess3.v,16|0): Numeric value '2' used for identifier 'next_state'. Use constants to avoid portability issues.
+halcheck: *W,SEPLIN (./excess3.v,15|0): Use a separate line for each HDL statement.
+halcheck: *W,NOBLKN (./excess3.v,20|0): Each block should be labeled with a meaningful name.
+halcheck: *N,ALOWID (./excess3.v,23|0): Signal/variable name 'stream_in' does not follow the active-low naming convention : should end with '_n'.
+halcheck: *W,ULCMPE (./excess3.v,23|0): Unequal length operands in equality operator encountered (padding produces incorrect result) in module/design-unit DUT. LHS operand is 1 bits, RHS operand is 32 bits.
+halcheck: *N,ALOWID (./excess3.v,35|0): Signal/variable name 'stream_in' does not follow the active-low naming convention : should end with '_n'.
+halcheck: *W,ULCMPE (./excess3.v,35|0): Unequal length operands in equality operator encountered (padding produces incorrect result) in module/design-unit DUT. LHS operand is 1 bits, RHS operand is 32 bits.
+halcheck: *N,ALOWID (./excess3.v,46|0): Signal/variable name 'stream_in' does not follow the active-low naming convention : should end with '_n'.
+halcheck: *W,ULCMPE (./excess3.v,46|0): Unequal length operands in equality operator encountered (padding produces incorrect result) in module/design-unit DUT. LHS operand is 1 bits, RHS operand is 32 bits.
+halcheck: *W,ULCMPE (./excess3.v,61|0): Unequal length operands in equality operator encountered (padding produces incorrect result) in module/design-unit DUT. LHS operand is 1 bits, RHS operand is 32 bits.
+halcheck: *N,ALOWID (./excess3.v,73|0): Signal/variable name 'stream_in' does not follow the active-low naming convention : should end with '_n'.
+halcheck: *W,ULCMPE (./excess3.v,73|0): Unequal length operands in equality operator encountered (padding produces incorrect result) in module/design-unit DUT. LHS operand is 1 bits, RHS operand is 32 bits.
+halcheck: *N,ALOWID (./excess3.v,82|0): Signal/variable name 'stream_in' does not follow the active-low naming convention : should end with '_n'.
+halcheck: *W,ULCMPE (./excess3.v,82|0): Unequal length operands in equality operator encountered (padding produces incorrect result) in module/design-unit DUT. LHS operand is 1 bits, RHS operand is 32 bits.
+halcheck: *W,NOBLKN (./excess3.v,91|0): Each block should be labeled with a meaningful name.
+halcheck: *W,ULCMPE (./excess3.v,92|0): Unequal length operands in equality operator encountered (padding produces incorrect result) in module/design-unit DUT. LHS operand is 1 bits, RHS operand is 32 bits.
+halcheck: *M,_SCOPE: testbench
+halcheck: Total errors   = 0.
+halcheck: Total warnings = 120.
+hal: *M,_SCOPE: __dummy_top
+halsynth: Loading design snapshot....
+halsynth: Traversing design hierarchy....
+halsynth: *M,_SCOPE: testbench.DUT
+halsynth: *W,INIUSP (./excess3.v,15|0): Module excess3 has an initial block or a variable declaration assignment, which is ignored by synthesis tools.
+halsynth: *W,SENCMW (./excess3.v,19|0): Sensitivity list incomplete for node next_state[2:0] in module excess3. Missing signal(s): state[2:0].
+halsynth: (./excess3.v,21|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,23|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,25|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,30|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,35|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,37|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,42|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,46|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,48|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,53|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,61|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,63|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,68|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,73|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,75|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,87|0): Source HDL information for the error/warning mentioned above.
+halsynth: *W,LATBAS (./excess3.v,19|0): In module/design-unit excess3, latch is assigned by blocking assignments.
+halsynth: *W,SENCMW (./excess3.v,19|0): Sensitivity list incomplete for node e3_out[0:0] in module excess3. Missing signal(s): state[2:0].
+halsynth: (./excess3.v,21|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,23|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,26|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,31|0): Source HDL information for the error/warning mentioned above.
+halsynth: *W,SENCMW (./excess3.v,19|0): Sensitivity list incomplete for node e3_out[1:1] in module excess3. Missing signal(s): state[2:0].
+halsynth: (./excess3.v,21|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,38|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,61|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,64|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,69|0): Source HDL information for the error/warning mentioned above.
+halsynth: *W,SENCMW (./excess3.v,19|0): Sensitivity list incomplete for node e3_out[2:2] in module excess3. Missing signal(s): state[2:0].
+halsynth: (./excess3.v,21|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,46|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,49|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,54|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,73|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,76|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,79|0): Source HDL information for the error/warning mentioned above.
+halsynth: *W,SENCMW (./excess3.v,19|0): Sensitivity list incomplete for node e3_out[3:3] in module excess3. Missing signal(s): state[2:0].
+halsynth: (./excess3.v,21|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,57|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,82|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,83|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,85|0): Source HDL information for the error/warning mentioned above.
+halsynth: *W,SENCMW (./excess3.v,19|0): Sensitivity list incomplete for node overflow[0:0] in module excess3. Missing signal(s): state[2:0].
+halsynth: (./excess3.v,21|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,58|0): Source HDL information for the error/warning mentioned above.
+halsynth: *E,CLKMIX (./excess3.v,90|0): Always block has both level and edge sensitive nodes in its sensitivity list.
+halsynth: *W,SENCMW (./excess3.v,90|0): Sensitivity list incomplete for node state[2:0] in module excess3. Missing signal(s): next_state[2:0].
+halsynth: (./excess3.v,92|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,93|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,95|0): Source HDL information for the error/warning mentioned above.
+halsynth: *W,NBCOMB (./excess3.v,90|0): Non-blocking assignment encountered in a combinational block.
+halsynth: (./excess3.v,93|0): Source HDL information for the error/warning mentioned above.
+halsynth: (./excess3.v,95|0): Source HDL information for the error/warning mentioned above.
+halsynth: *M,_SCOPE: testbench
+halsynth: *E,AWNDEL (./excess3_tb.v,16|0): Always block with no event trigger at the start in module testbench.
+halsynth: *W,INIUSP (./excess3_tb.v,18|0): Module testbench has an initial block or a variable declaration assignment, which is ignored by synthesis tools.
+halsynth: *W,INIUSP (./excess3_tb.v,31|0): Module testbench has an initial block or a variable declaration assignment, which is ignored by synthesis tools.
+halsynth: *W,COMBLP: In module testbench, combinational loop detected for node clk.
+halsynth: (./excess3_tb.v,17|0): Source HDL information for the error/warning mentioned above.
+@:clk 
+halsynth: *W,NBCOMB (./excess3_tb.v,16|0): Non-blocking assignment encountered in a combinational block.
+halsynth: (./excess3_tb.v,17|0): Source HDL information for the error/warning mentioned above.
+halsynth: *W,IGNDLY (./excess3_tb.v,17|0): Lumped delay in module 'testbench' is ignored.
+~:CLKOUT
+~:CLKSRD
+~:COMBLP
+~:INPOUT
+~:MUDREG
+~:MULWIR
+~:UNDRIV
+halsynth: Total errors   = 2.
+halsynth: Total warnings = 15.
+hal: *E,BLDSTP: Further processing stopped because of synthesizability errors.
+~:DSCNCK
+^:DSCNCK
+~:SLENEX
+^:SLENEX
+~:DSCNEN
+^:DSCNEN
+~:PCNOTC
+^:PCNOTC
+~:INPASN
+~:UNCONN
+~:UNDRIV
+~:USEPRT
+~:UASPRT
+~:URDPRT
+~:GATCLK
+~:RENAME
+~:RWRACE
+~:WWRACE
+~:LPISCS
+~:LPSRCS
+~:CMBPAU
+^:CMBPAU
+~:ASNCFL
+^:ASNCFL
+~:CONTLN
+^:CONTLN
+~:LATINF
+^:LATINF
+~:MULMCK
+^:MULMCK
+~:FFCKNP
+^:FFCKNP
+~:GTDCLK
+^:GTDCLK
+~:CLKLAT
+^:CLKLAT
+~:CLKNPI
+^:CLKNPI
+~:GTCLKN
+^:GTCLKN
+~:MRSTDT
+^:MRSTDT
+~:FDTHRU
+^:FDTHRU
+~:DFDRVS
+^:DFDRVS
+~:NEFLOP
+^:NEFLOP
+~:ACNCPI
+^:ACNCPI
+~:LENCPI
+^:LENCPI
+~:CLKDAT
+^:CLKDAT
+~:CLKLDT
+^:CLKLDT
+~:CLKINF
+^:CLKINF
+~:CDFDAT
+^:CDFDAT
+~:CDLDAT
+^:CDLDAT
+~:CAAFSR
+^:CAAFSR
+~:CACSRF
+^:CACSRF
+~:CAALSR
+^:CAALSR
+~:CACSRL
+^:CACSRL
+~:CLKDMN
+^:CLKDMN
+~:INSYNC
+^:INSYNC
+~:CBPAHI
+^:CBPAHI
+~:LFLTSE
+^:LFLTSE
+~:LFFTNE
+^:LFFTNE
+~:INFNOT
+^:INFNOT
+~:DALIAS
+^:DALIAS
+~:JKFFDT
+^:JKFFDT
+~:LATRAN
+^:LATRAN
+~:UNCONI
+^:UNCONI
+~:UNCONO
+^:UNCONO
+~:DIFCLK
+^:DIFCLK
+~:DIFRST
+^:DIFRST
+~:MLTDRV
+^:MLTDRV
+~:SUTHRU
+^:SUTHRU
+~:SEICLK
+^:SEICLK
+~:SMTCLK
+^:SMTCLK
+~:ASRTCK
+^:ASRTCK
+~:ASRTCL
+^:ASRTCL
+~:ASRTSC
+^:ASRTSC
+~:SCICLK
+^:SCICLK
+~:MULTCK
+^:MULTCK
+~:NOTCLK
+^:NOTCLK
+~:TCDFDT
+^:TCDFDT
+~:TCDLDT
+^:TCDLDT
+~:TCKDAT
+^:TCKDAT
+~:TCKLDT
+^:TCKLDT
+~:TXCNOP
+^:TXCNOP
+~:MEMNOP
+^:MEMNOP
+~:TENNOC
+^:TENNOC
+~:TENNOD
+^:TENNOD
+~:GLTASR
+^:GLTASR
+~:RSTEDG
+^:RSTEDG
+~:NOTSCN
+^:NOTSCN
+~:MCKNDB
+^:MCKNDB
+~:WENNDB
+^:WENNDB
+~:SCNLEN
+^:SCNLEN
+~:TMSCFF
+^:TMSCFF
+~:OUTMNR
+^:OUTMNR
+~:INPMNR
+^:INPMNR
+~:SRENSL
+^:SRENSL
+~:LDFFPI
+^:LDFFPI
+~:RSTDAT
+^:RSTDAT
+~:RSTGNH
+^:RSTGNH
+~:CLKGNH
+^:CLKGNH
+~:MXTSBC
+^:MXTSBC
+~:TSBNTH
+^:TSBNTH
+~:MXFNOT
+^:MXFNOT
+~:ATLGLC
+^:ATLGLC
+~:SLNOTP
+^:SLNOTP
+~:TPOUNR
+^:TPOUNR
+~:SELCLK
+^:SELCLK
+~:EDGMIX
+^:EDGMIX
+~:LGRSTL
+^:LGRSTL
+~:FRSTDL
+^:FRSTDL
+~:FRSTDF
+^:FRSTDF
+~:RSTDPT
+^:RSTDPT
+~:CLKDPT
+^:CLKDPT
+~:CLKUCL
+^:CLKUCL
+~:RSTUCL
+^:RSTUCL
+hal: *M,_SCOPE: __dummy_top

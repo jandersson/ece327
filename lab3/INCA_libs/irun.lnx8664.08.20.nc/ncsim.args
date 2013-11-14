@@ -1,0 +1,19 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-NOSTDOUT
+-XLSTIME
+1382720656
+-XLKEEP
+-XLMODE
+./INCA_libs/irun.lnx8664.08.20.nc
+-RUNMODE
+-CDSLIB
+./INCA_libs/irun.lnx8664.08.20.nc/cds.lib
+-HDLVAR
+./INCA_libs/irun.lnx8664.08.20.nc/hdl.var
+-XLNAME
+irun
+-XLVERSION
+"TOOL:	irun(64)	08.20-s029"

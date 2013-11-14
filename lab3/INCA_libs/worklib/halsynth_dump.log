@@ -1,0 +1,6 @@
+General information about this run 
+-- piranha worklib.testbench:v
+-- TOOL:	cfe64	08.20.029-s(08.20.s029)
+-- cfe64 Build : Thu Jan 27 18:24:41 IST 2011 ldvopt123
+-- Options : -DUMP +TOOLNAME halsynth -HAL ALL +DISABLE -MULTI_DRIVEN_REG TRI -NOLOG +PRIM_TRI +FSM_RULE_CHECKS -SYNTHESIS ALL -IGNORE_COMB_INIT -VITAL_BLACKBOX +MDARRAY_ON -BB_SIG_SIZE 16384 -DEFINES /cadence/IUS/tools/hal/files/hal.def +RULES_LIST +HAL_SIDEFILE hal.log -PRAGMA ALL -cdslib ./INCA_libs/irun.nc/cds.lib -hdlvar ./INCA_libs/irun.nc/hdl.var worklib.testbench:v
+-- SMV File is :/ugrad/jonas/Documents/ece327/lab3/INCA_libs/worklib/testbench/v/testbench.smv

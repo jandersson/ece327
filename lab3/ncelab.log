@@ -1,0 +1,35 @@
+ncelab(64): 08.20-s029: (c) Copyright 1995-2011 Cadence Design Systems, Inc.
+include $CDS_INST_DIR/tools/inca/files/hdl.var
+|
+ncelab: *W,DLHPTH (./hdl.var,2): hdl.var invalid path '/cadence/tools/inca/files/hdl.var' (hdl.var command ignored).
+TOOL:	ncelab(64)	08.20-s029: Started on Nov 14, 2013 at 07:59:01 CST
+ncelab
+    -mess
+    -access rwc
+    worklib.excess3_tb
+
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+include $CDS_INST_DIR/tools/inca/files/hdl.var
+|
+ncvlog_cg: *W,DLHPTH (./hdl.var,2): hdl.var invalid path '/cadence/tools/inca/files/hdl.var' (hdl.var command ignored).
+		worklib.excess3:module <0x582f5012>
+			streams:  18, words:  7490
+		worklib.excess3_tb:module <0x205753a5>
+			streams:   4, words:  4254
+	Loading native compiled code:     .................... Done
+	Building instance specific data structures.
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:               6       6
+		Scalar wires:            1       -
+		Vectored wires:          2       -
+		Always blocks:           2       2
+		Initial blocks:          3       3
+		Pseudo assignments:      2       2
+		Simulation timescale:  1ns
+	Writing initial simulation snapshot: worklib.excess3_tb:module
+TOOL:	ncelab(64)	08.20-s029: Exiting on Nov 14, 2013 at 07:59:03 CST  (total: 00:00:02)

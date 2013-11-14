@@ -1,0 +1,15 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-c
+-q
+-nostdout
+-access
++rwc
+-ncelabargs
+-partialdesign
+-log
+./.hal-irun.log
+/ugrad/jonas/Documents/ece327/lab3/excess3.v
+/ugrad/jonas/Documents/ece327/lab3/excess3_tb.v

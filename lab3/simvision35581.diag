@@ -1,0 +1,97 @@
+*** Message Type: info ***
+When: Wed Nov 13 05:41:27 PM CST 2013
+SimVision started.
+Version: TOOL:  simvision(64)   08.20-s029
+User: jonas
+Host: engr-e132-d20.engr.siu.edu
+Platform: Linux/x86_64/3.2.0-4-amd64
+Started: Wed Nov 13 05:41:27 PM CST 2013
+Command: /cadence/IUS/tools.lnx86/simvision/bin/64bit/simvision.exe -connect dc:engr-e132-d20.engr.siu.edu:43858 -64BIT
+Work Directory: /ugrad/jonas/Documents/ece327/lab3
+ 
+*** Message Type: info ***
+When: Wed Nov 13 05:41:28 PM CST 2013
+Create browser window: "Design Browser 1"
+ 
+*** Message Type: info ***
+When: Wed Nov 13 05:41:30 PM CST 2013
+Create console window: "Console"
+ 
+*** Message Type: info ***
+When: Wed Nov 13 05:41:31 PM CST 2013
+Connect to Simulator
+      Design: worklib.excess3_tb:module
+   Languages: verilog
+   Simulator: NC-Sim
+     Version: TOOL:  ncsim(64)       08.20-s029
+        User: jonas
+        Host: engr-e132-d20.engr.siu.edu
+Time Started: Wed Nov 13 05:41:22 PM CST 2013
+  Process ID: 35578
+   Directory: /ugrad/jonas/Documents/ece327/lab3
+     Command: ncsim -gui worklib.excess3_tb:module
+
+ 
+*** Message Type: info ***
+When: Wed Nov 13 05:41:31 PM CST 2013
+Create utility window: "Properties"
+ 
+*** Message Type: info ***
+When: Wed Nov 13 05:42:39 PM CST 2013
+Create waveform window: "Waveform 1"
+ 
+*** Message Type: info ***
+When: Wed Nov 13 05:43:55 PM CST 2013
+Exit NC-Sim: user
+      Design: worklib.excess3_tb:module
+   Languages: verilog
+   Simulator: NC-Sim
+     Version: TOOL:  ncsim(64)       08.20-s029
+        User: jonas
+        Host: engr-e132-d20.engr.siu.edu
+Time Started: Wed Nov 13 05:41:22 PM CST 2013
+  Process ID: 35578
+   Directory: /ugrad/jonas/Documents/ece327/lab3
+     Command: ncsim -gui worklib.excess3_tb:module
+
+ 
+*** Message Type: error ***
+When: Wed Nov 13 05:43:56 PM CST 2013
+NC-Sim Crashed:
+      Design: worklib.excess3_tb:module
+   Languages: verilog
+   Simulator: NC-Sim
+     Version: TOOL:  ncsim(64)       08.20-s029
+        User: jonas
+        Host: engr-e132-d20.engr.siu.edu
+Time Started: Wed Nov 13 05:41:22 PM CST 2013
+  Process ID: 35578
+   Directory: /ugrad/jonas/Documents/ece327/lab3
+     Command: ncsim -gui worklib.excess3_tb:module
+
+Outstanding STRAP Requests:
+        strap::report enable out
+ 
+*** Message Type: error ***
+When: Wed Nov 13 05:43:56 PM CST 2013
+can't read "sims(state)": no such element in array
+can't read "sims(state)": no such element in array
+    while executing
+"if {$sims(state) == "terminated"} {
+    return
+    }"
+    (object "::.console0.work.user.tabnotebook.1" method "::ConsoleSimTab::_simState" body line 8)
+    invoked from within
+"::.console0.work.user.tabnotebook.1 _simState event !state"
+    (in namespace inscope "::ConsoleSimTab" script line 1)
+    invoked from within
+"namespace inscope ::ConsoleSimTab {::.console0.work.user.tabnotebook.1 _simState} event !state"
+ 
+*** Message Type: info ***
+When: Wed Nov 13 05:43:56 PM CST 2013
+Recall Simulator
+ 
+*** Message Type: info ***
+When: Wed Nov 13 05:44:03 PM CST 2013
+SimVision Exit.
+ 

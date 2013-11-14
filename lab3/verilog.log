@@ -1,0 +1,58 @@
+Host command: /cadence/IUS/tools/verilog/bin/verilog.exe
+Command arguments:
+    excess3.v
+    excess3_tb.v
+
+Tool:	VERILOG-XL	08.20.001-p log file created Oct 29, 2013  15:17:56
+Tool:	VERILOG-XL	08.20.001-p   Oct 29, 2013  15:17:56
+
+Copyright (c) 1995-2004 Cadence Design Systems, Inc.  All Rights Reserved.
+Unpublished -- rights reserved under the copyright laws of the United States.
+
+Copyright (c) 1995-2004 UNIX Systems Laboratories, Inc.  Reproduced with Permission.
+
+THIS SOFTWARE AND ON-LINE DOCUMENTATION CONTAIN CONFIDENTIAL INFORMATION
+AND TRADE SECRETS OF CADENCE DESIGN SYSTEMS, INC.  USE, DISCLOSURE, OR
+REPRODUCTION IS PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF
+CADENCE DESIGN SYSTEMS, INC.
+RESTRICTED RIGHTS LEGEND
+
+Use, duplication, or disclosure by the Government is subject to
+restrictions as set forth in subparagraph (c)(1)(ii) of the Rights in
+Technical Data and Computer Software clause at DFARS 252.227-7013 or
+subparagraphs (c)(1) and (2) of Commercial Computer Software -- Restricted
+Rights at 48 CFR 52.227-19, as applicable.
+
+                Cadence Design Systems, Inc.
+                555 River Oaks Parkway
+                San Jose, California  95134
+
+For technical assistance please contact the Cadence Response Center at
+1-877-CDS-4911 or send email to support@cadence.com
+
+For more information on Cadence's Verilog-XL product line send email to
+talkv@cadence.com
+
+Compiling source file "excess3.v"
+Compiling source file "excess3_tb.v"
+Highest level modules:
+testbench
+
+Input:  0, Output:  3
+Input:  1, Output:  4
+Input:  2, Output:  1
+Input:  3, Output:  2
+Input:  4, Output:  7
+Input:  5, Output:  7
+Input:  6, Output:  7
+Input:  7, Output:  7
+Input:  8, Output: 11
+Input:  9, Output: 10
+Input: 10, Output:  9
+Input: 11, Output: 10
+Input: 12, Output:  8
+Input: 13, Output:  8
+L38 "excess3_tb.v": $finish at simulation time 200
+0 simulation events (use +profile or +listcounts option to count)
+CPU time: 0.0 secs to compile + 0.0 secs to link + 0.0 secs in simulation
+End of Tool:	VERILOG-XL	08.20.001-p   Oct 29, 2013  15:17:56

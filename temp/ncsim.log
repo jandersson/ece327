@@ -1,0 +1,36 @@
+ncsim(64): 08.20-s029: (c) Copyright 1995-2011 Cadence Design Systems, Inc.
+define worklib /cadence/IUS/tools/inca/files/worklib
+|
+ncsim: *W,DLCPTH (./cds.lib,11): cds.lib Permission denied '/cadence/IUS/tools/inca/files/worklib' (cds.lib command ignored).
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> stop -create -time 200ns -relative
+Created stop 1
+ncsim> stop -create -time 200ns -relative
+Created stop 2
+ncsim> database -open waves -into waves.shm -default
+Created default SHM database waves
+ncsim> probe -create -shm excess3_tb.DUT.e3_out excess3_tb.DUT.stream_in
+ncsim: *E,OBJACC: Object must have read access: excess3_tb.DUT.e3_out.
+ncsim: *E,OBJACC: Object must have read access: excess3_tb.DUT.stream_in.
+ncsim> run
+Input:  0, Output:  3
+Input:  1, Output:  4
+Input:  2, Output:  1
+Input:  3, Output:  2
+Input:  4, Output:  7
+Input:  5, Output:  7
+Input:  6, Output:  7
+Input:  7, Output:  7
+Input:  8, Output: 11
+Input:  9, Output: 10
+Input: 10, Output:  9
+Input: 11, Output: 10
+Input: 12, Output:  8
+Input: 13, Output:  8
+200 NS + 0 (stop 2)
+200 NS + 0 (stop 1)
+ncsim> ^C
+ncsim> exit

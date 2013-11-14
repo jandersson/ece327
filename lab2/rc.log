@@ -1,0 +1,279 @@
+Checking out license 'RTL_Compiler_Physical'... (0 seconds elapsed)
+License RTL_Compiler_Physical checkout failed
+Checking out license 'RTL_Compiler_Ultra'... (0 seconds elapsed)
+
+                       Cadence Encounter(R) RTL Compiler
+         Version RC9.1.104 - v09.10-s145_1 (64-bit), built Feb 15 2010
+
+
+Copyright notice: Copyright 1997-2009 Cadence Design Systems, Inc. All rights 
+reserved worldwide. 
+
+Patent notices: Protected by U.S. Patents: 5892687; 6470486; 6772398; 6772399; 
+6807651; 6832357; 7007247 
+
+
+===============================================================================
+                 Welcome to Cadence Encounter(R) RTL Compiler
+
+Here is a quick introduction on how to access our product information.  
+If you do not want this message to appear in the future, create an 
+initialization file (an empty file will do) in your home directory 
+called '~/.cadence/.synth_init'.
+
+  To access the product documentation in HTML and PDF, type 'cdnshelp'
+    at the system prompt. 
+  For a list of available commands, type 'help'. 
+  To view a man page for a command, type 'man <commandName>'.
+  To view a man page for an error message, type 'man <messageID>'.
+  For a list of all possible object types, type 'get_attribute -help'.
+  For a list of all available attributes by object type, type
+    'get_attribute * <object_type> -help'.
+  For a list of all attributes for every object type, type
+    'get_attribute * * -help'
+  To list only writable attributes, substitute 'get_attribute' with
+    'set_attribute'.
+  To get a template script to run RTL Compiler, use the 'write_template'
+    command.
+  To get a template script to run Conformal based on the current RTL
+    Compiler session, use the 'write_do_lec' command.
+  
+  Obsolete attributes in the current tool version.
+  To learn more, type 'get_attribute -help <attribute> <object>'.
+
+       object  attribute
+       ------  ---------
+       design  checkpoint_dofile_naming_style
+       design  checkpoint_netlist_naming_style
+       design  dp_perform_rewriting_operations
+       design  multipass_mux_optimization
+       design  timing_driven_muxopto
+     instance  black_box
+     instance  dft_inherited_dont_scan
+     instance  write_positional_connections
+      libcell  black_box
+          net  logic0_driven
+          net  logic1_driven
+         root  bit_blast_constants
+         root  bit_blast_mapped_ports
+         root  checkpoint_flow
+         root  checkpoint_gzipped_netlist
+         root  degenerate_complex_seqs
+         root  delayed_pragma_commands_interpreter
+         root  dp_perform_rewriting_operations
+         root  dp_perform_sharing_operations
+         root  exact_match_seqs_async_controls
+         root  gen_no_negative_index
+         root  gen_unconnected_port_style
+         root  gen_write_empty_module_for_logic_abstract
+         root  hdl_array_generator
+         root  hdl_flatten_array
+         root  hdl_old_reg_naming
+         root  hdl_record_generator
+         root  hdl_reg_naming_style_scalar
+         root  hdl_reg_naming_style_vector
+         root  hdl_trim_target_index
+         root  hdl_vector_naming_style
+         root  lbr_async_clr_pre_seqs_interchangable
+         root  pqos_virtual_buffer
+         root  retime_preserve_state_points
+         root  wlec_env_var
+         root  wlec_flat_r2n
+         root  wlec_new_hier_comp
+         root  wlec_no_exit
+         root  wlec_save_ssion
+         root  wlec_sim_lib
+         root  wlec_sim_plus_lib
+         root  wlec_verbose
+    subdesign  allow_sharing_subdesign
+    subdesign  dp_perform_rewriting_operations
+    subdesign  multipass_mux_optimization
+    subdesign  timing_driven_muxopto
+
+Send us feedback at rc_feedback@cadence.com.
+===============================================================================
+
+rc:/> set_attribute lib_search_path /cadence/GPDK/osu_stdcells/lib/tsmc018/signalstorm
+  Setting attribute of root '/': 'lib_search_path' = /cadence/GPDK/osu_stdcells/lib/tsmc018/signalstorm
+rc:/> set_attribute library osu018_stdcells.lib
+  Setting attribute of root '/': 'library' = osu018_stdcells.lib
+rc:/> man set_attribute
+RC 9.1
+set_attribute(1)                                             set_attribute(1)
+
+
+
+NAME
+       set_attribute
+
+SYNTAX
+              set_attribute
+
+              { <attribute_name> <attribute_value> [<objects>]
+
+                [-quiet] [-lock]
+
+              | -h  {<attribute_name >| *] {<type>|*}}
+
+
+
+
+DESCRIPTION
+       Sets  the  value  of  a specified attribute or returns a list of valid
+       attributes.
+
+
+       Attributes are placed on directory objects to control the way they are
+       processed  by  RTL Compiler. They can also be used to control the syn-
+       thesis process, the style of the generated code,  and  numerous  other
+       things.  A  complete  list  of  all  attributes  is  contained  in the
+       Attribute Reference for Encounter RTL Compiler.
+
+
+       Note: Not all attributes can be set. Attempting  to  set  a  read-only
+       attribute  returns an error. The Attribute Reference for Encounter RTL
+       Compiler indicates whether an attribute is read-write or read-only.
+
+
+       Options and Arguments
+
+             <attribute_name>                    Specifies the name of the attribute whose
+                                               value you want to set.
+
+           <attribute_value>                     Specifies the new attribute value. The value
+                                               can be either a Boolean, integer, or string. A
+                                               compound string (containing spaces) should be
+                                               represented as a list using double-quotes or
+                                               braces.
+
+           -lock                                 Locks the specified attributes value so
+                                               that it cannot be changed. The attribute becomes
+                                               read-only.
+
+           <objects>                             Specifies the path(s) to the objects.Default:
+                                               current directory
+
+           -quiet                                Suppresses those messages that indicate
+                                               which objects are being affected. Alternatively,
+                                               when setting an attribute on an object, an
+                                               information message will not be printed.
+
+           <type>                                Specifies the object type for which you
+                                               want the list of attribute names. Specify any of
+                                               the values in the table below:
+
+
+             actual_scan_chain                    actual_scan_segment                     attribute
+
+           boundary_scan_segment                  clock                                   constant
+
+           cost_group                             cpf_command                             cpf_file
+
+           cpf_scope                              design                                  exception
+
+           exploration_power_domain               exported_variable                       external_delay
+
+           gcell                                  hdl_arch                                hdl_bind
+
+           hdl_block                              hdl_comp                                hdl_impl
+
+           hdl_inst                               hdl_label                               hdl_lib
+
+           hdl_oper                               hdl_param                               hdl_pin
+
+           hdl_proc                               hdl_subp                                instance
+
+           isolation_rule                         job                                     jtag_instruction
+
+           jtag_instruction_register              jtag_macro                              jtag_port
+
+           layer                                  level_shifter_rule                      libarc
+
+           libcell                                libpin                                  library
+
+           library_domain                         message                                 mode
+
+           net                                    opcg_domain                             opcg_mode
+
+           operating_condition                    pin                                     port
+
+           port_bus                               power_domain                            power_ground_net
+
+           queue                                  root                                    row
+
+           run                                    run_parameter                           scan_chain
+
+           scan_segment                           scenario                                subdesign
+
+           subport                                subport_bus                             subscenario
+
+           test_clock                             test_signal                             thread
+
+           thread_parameter                       thread_result                           wireload
+
+
+
+
+
+       Examples
+
+
+        - The following example lists all valid attributes that you can set:
+
+
+       rc:/> set_attribute * * -help
+       Both type and attribute_name accept wildcard strings.
+
+
+
+        - The following example lists all valid attribute names that  contain
+       the string dont:
+
+
+       rc:/> set_attribute *dont* * -help
+
+
+
+        -  The  following example sets the information_level attribute, which
+       controls the verbosity of the tools, to the value of 5 and assumes the
+       current directory for the path:
+
+
+       rc:/> set_attribute information_level 5
+            Setting attribute of root /: 'information_level' = 5
+
+
+
+        -  In  the following example, the path needed to be specified because
+       information_level is a root attribute and would not have been found in
+       the current path:
+
+
+       rc:/designs/alu> set_attribute information_level 5 /
+            Setting attribute of root /: 'information_level' = 5
+
+
+
+        -   The  following  locks  the  technology  library  search  path  to
+       /home/Test/bree by locking the lib_search_path attribute. For the rest
+       of the session, the lib_search_path attribute becomes read-only.:
+
+
+       rc:/> set_attribute -lock lib_search_path /home/Test/bree
+
+
+
+       Related Information
+
+             Affects these commands:             ls on page 71
+
+                                                 get_attribute on page 76
+
+
+
+
+
+
+                           Thu Nov 26 21:18:21 2009          set_attribute(1)
+<standard input>:52: warning: can't find special character `u0092'
+rc:/> 

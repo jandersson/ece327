@@ -1,0 +1,19 @@
+ncvlog(64): 08.20-s029: (c) Copyright 1995-2011 Cadence Design Systems, Inc.
+ncvlog: *W,MISCLA: a -CDSLIB option was found with no argument, option ignored.
+include $CDS_INST_DIR/tools/inca/files/hdl.var
+|
+ncvlog: *W,DLHPTH (./hdl.var,2): hdl.var invalid path '/cadence/tools/inca/files/hdl.var' (hdl.var command ignored).
+TOOL:	ncvlog(64)	08.20-s029: Started on Nov 14, 2013 at 07:58:18 CST
+ncvlog
+    -mess
+    -cdslib
+    -work worklib
+    -hdlvar ./hdl.var
+    excess3_tb.v
+
+file: excess3_tb.v
+	module worklib.excess3_tb
+		errors: 0, warnings: 0
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 2
+TOOL:	ncvlog(64)	08.20-s029: Exiting on Nov 14, 2013 at 07:58:18 CST  (total: 00:00:00)

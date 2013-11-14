@@ -1,0 +1,40 @@
+ncelab(64): 08.20-s029: (c) Copyright 1995-2011 Cadence Design Systems, Inc.
+TOOL:	ncelab(64)	08.20-s029: Started on Nov 12, 2013 at 16:03:57 CST
+ncelab
+    -mess
+    -access rwc
+    worklib.halfadd_tb
+
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+mainmod BC (
+         |
+ncelab: *W,CUVWSP (./bitcount_struct_tb.v,7|9): 1 output port was not connected:
+ncelab: (./bitcount_struct.v,16): sum
+
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.fulladd:module <0x118c3f3f>
+			streams:   1, words:   369
+		worklib.halfadd:module <0x0ebf88c9>
+			streams:   1, words:   148
+		worklib.halfadd_tb:module <0x09f078b4>
+			streams:   2, words:  1727
+		worklib.mainmod:module <0x48b4da14>
+			streams:   2, words:   482
+	Loading native compiled code:     .................... Done
+	Building instance specific data structures.
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                13       4
+		Primitives:              4       1
+		Registers:               2       2
+		Scalar wires:           21       -
+		Expanded wires:          8       1
+		Vectored wires:          1       -
+		Initial blocks:          1       1
+		Cont. assignments:      12       4
+		Pseudo assignments:      2       2
+		Simulation timescale:  1ns
+	Writing initial simulation snapshot: worklib.halfadd_tb:module
+TOOL:	ncelab(64)	08.20-s029: Exiting on Nov 12, 2013 at 16:03:58 CST  (total: 00:00:01)

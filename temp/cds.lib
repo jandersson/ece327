@@ -1,0 +1,12 @@
+# Soft include definitions for each INCA option
+SOFTINCLUDE ./cdsvhdl.lib
+SOFTINCLUDE ./cdsvlog.lib
+
+# Soft includes for products depending on INCA compilers and elaborator
+SOFTINCLUDE ../../cfe/files/cds.lib
+SOFTINCLUDE ../../transrecord/files/cds.lib
+
+# Soft includes for Affirma AMS connection module libraries 
+SOFTINCLUDE ../../affirma_ams/etc/connect_lib/cds.lib
+define worklib /cadence/IUS/tools/inca/files/worklib
+define worklib /ugrad/jonas/Documents/ece327/temp/worklib

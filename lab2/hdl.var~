@@ -1,0 +1,37 @@
+#
+# System wide INCA-global variable definitions
+#
+DEFINE NCSIMRC         ( ./ncsimrc, ~/.ncsimrc )
+DEFINE NCHELP_DIR      ./help
+
+#
+# Other potentially useful system wide variables (examples).
+# Please see your documentation for more information.
+#
+# DEFINE NCELABOPTS -messages 
+# DEFINE NCSIMOPTS  -batch -messages
+#
+# DEFINE LIB_UMASK  0000
+#
+#
+# By uncommenting the following line (definition of 
+# NCSIMOPTS - system-wide variable), the simulator will 
+# follow the license checkout order as defined by the 
+# arguments to the -uselicense option. The order presented
+# here as an example will make the simulator prefer AMSD 
+# license strings over Incisive license strings for 
+# designs with analog content.
+#
+# DEFINE NCSIMOPTS -uselicense AMSD:IAMSOPT:IDTAMSOPT:MMSIM:IMMSIM:IDTMMSIM:DEFAULT
+#
+
+
+#
+# Soft include definitions for each INCA option
+SOFTINCLUDE ./hdlvhdl.var
+SOFTINCLUDE ./hdlvlog.var
+
+# Soft includes for products depending on INCA compilers and elaborator
+SOFTINCLUDE ../../cfe/files/hdl.var
+
+define WORK work

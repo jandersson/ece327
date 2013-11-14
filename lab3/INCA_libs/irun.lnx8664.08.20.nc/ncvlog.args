@@ -1,0 +1,16 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-XLMODE
+./INCA_libs/irun.lnx8664.08.20.nc
+-RUNMODE
+-NOSTDOUT
+/ugrad/jonas/Documents/ece327/lab3/excess3.v
+/ugrad/jonas/Documents/ece327/lab3/excess3_tb.v
+-CDSLIB
+./INCA_libs/irun.lnx8664.08.20.nc/cdsrun.lib
+-HDLVAR
+./INCA_libs/irun.lnx8664.08.20.nc/hdlrun.var
+-UPDATE
+-ALLOWUNBOUND
