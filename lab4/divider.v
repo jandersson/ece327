@@ -2,9 +2,12 @@
 
 // Jonas Andersson
 //TODO:
-//	IMPLEMENT: []reglne module
-//	TEST: []downcount module
-//				
+//	IMPLEMENT: [x]regne module
+//             []shiftlne module
+//	TEST: [x]downcount module
+//		  [x]muxdff module 
+//		  []regne module
+//        []shiftlne module				
 
 
 module divider (Clock, Resetn, s, LA, EB, DataA, DataB, R, Q, Done);
@@ -119,7 +122,14 @@ end
 endmodule
 	
 module muxdff(D0, D1, Sel, Clock, Q);
-//figure 5.47
+// figure 5.47
+// This is basically a 2-1 multiplexer
+// D0: Data stream 0
+// D1: Data stream 1
+// Sel: Select bit
+//		When Select is 0, D0 is connected to Q
+//		When Select is 1, D1 is connected to Q
+
 	input D0, D1, Sel, Clock;
 	output Q;
 	reg Q;
@@ -132,7 +142,12 @@ module muxdff(D0, D1, Sel, Clock, Q);
 endmodule
 
 module downcount (R, Clock, E, L, Q);
-//Figure 5.54
+// Figure 5.54
+// A counter that begins counting down when enabled
+// L: Load Counter (if this is on, the counter will never count, only load)
+// E: Enable Counter (L needs to be 0 also)
+// R: Data from input stream, the counter will load this value
+// Q: Counter state, the output
 parameter n = 8;
 input [n-1:0] R;
 input Clock, L, E;
@@ -140,19 +155,22 @@ output [n-1:0] Q;
 reg [n-1:0] Q;
 
 always @(posedge Clock)
-	if (L)
+	if (L == 1)
 		Q <= R;
-	else if (E)
+	else if (E == 1)
 		Q <= Q - 1;
 
 endmodule
 
-module shiftn(R, L, w, Clock, Q);
-// page 298
+module shiftln(R, L, w, Clock, Q);
+// Figure 5.51 on page 298
+// modified to shift left instead of right
 // R: Data from input stream
 // L: Load_Enable
 // w: bit to insert after shifting
 // Q: shifted input, its the output
+// TODO: []add enable switch
+
 
 	parameter n = 8;
 	input [n-1:0] R;
@@ -165,10 +183,27 @@ module shiftn(R, L, w, Clock, Q);
 	always @(posedge Clock)
 		if(L == 1)
 			Q <= R;
-		else 
+		else
 		begin
 			for (k = 0; k < n - 1; k = k + 1)
 				Q[k+1] <= Q[k];
 			Q[0] <= w;	
 		end
+endmodule
+
+module regne (R, Clock, Resetn, E, Q)
+// Figure 5.58 on page 302
+// An n-bit register with an enable input
+
+parameter n = 8;
+input [n-1:0] R:
+input Clock, Resetn, E;
+output [n-1:0] Q;
+reg [n-1:0] Q;
+
+always @(posedge Clock, negedge Resetn)
+	if (Resetn == 0)
+		Q <= 0;
+	else if (E == 1)
+		Q <= R;
 endmodule
