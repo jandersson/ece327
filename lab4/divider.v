@@ -3,15 +3,27 @@
 // Jonas Andersson
 //TODO:
 //	IMPLEMENT: [x]regne module
-//             []shiftlne module
+//             [x]shiftlne module
+//			   [x]Connect divider module to sub modules
 //	TEST: [x]downcount module
 //		  [x]muxdff module 
 //		  [x]regne module
-//        []shiftlne module				
+//        [x]shiftlne module
+//		  []divider module					
 
 
 module divider (Clock, Resetn, s, LA, EB, DataA, DataB, R, Q, Done);
-parameter n = 8, logn = 3;
+// Clock: A Clock
+// Resetn: Reset to 0 when equal to 0
+// s: Go signal
+// LA: Load Data into Register A
+// EB: This is never used anywhere...
+// DataA:
+// DataB:
+// R:
+// Q:
+// Done: Asserted when divider is finished
+parameter n = 8, logn = 8;
 input Clock, Resetn, s, LA, EB;
 input [n-1:0] DataA, DataB;
 output [n-1:0] R, Q;
@@ -103,22 +115,44 @@ end
 
 //datapath circuit
 
-//regne RegB (DataB, Clock, Resetn, EB, B);
-//	defparam RegB.n = n;
-//shiftlne ShiftR (DataR, LR, ER, R0, Clock, R);
-//	defparam ShiftR.n = n;
-//muxdff FF_R0 (1'b0, A[n-1], ER0, Clock, R);
-//shiftlne ShiftA(DataA, LA, EA, Cout, Clock, A);
-//	defparam ShiftA.n = n;
-//assign Q = A;
-//downcount Counter(Clock, EC, LC, Count);
-//	defparam Counter.n = logn;
-//assign z = (Count == 0);
-//assign Sum = {1'b0, R[n-2:0], R0} + {1'b0, ~B} + 1;
-//assign Cout = Sum[n];
+regne RegB (.R(DataB),
+            .Clock(Clock),
+            .Resetn(Resetn), 
+            .E(EB),
+            .Q(B));
+	defparam RegB.n = n;
+shiftlne ShiftR (.R(DataR),
+                 .L(LR),
+                 .E(ER),
+                 .w(R0), 
+                 .Clock(Clock),
+                 .Q(R));
+	defparam ShiftR.n = n;
+muxdff FF_R0 (.D0(1'b0),
+              .D1(A[n-1]),
+              .Sel(ER0),
+              .Clock(Clock),
+              .Q(R0));
+shiftlne ShiftA(.R(DataA),
+                .L(LA),
+                .E(EA),
+                .w(Cout),
+                .Clock(Clock),
+                .Q(A));
+	defparam ShiftA.n = n;
+assign Q = A;
+downcount Counter(.Clock(Clock),
+                  .E(EC), 
+                  .L(LC),
+                  .Q(Count),
+                  .R(B));
+	defparam Counter.n = logn;
+assign z = (Count == 0);
+assign Sum = {1'b0, R[n-2:0], R0} + {1'b0, ~B} + 1;
+assign Cout = Sum[n];
 
 //define the n 2-to-1 multiplexers
-//assign DataR = Rsel ? Sum : 0;
+assign DataR = Rsel ? Sum : 0;
 endmodule
 	
 module muxdff(D0, D1, Sel, Clock, Q);
