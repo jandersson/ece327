@@ -8,24 +8,30 @@ module shiftlne_tb;
 // It appears only one cycle is required to shift all the bits one place.
 parameter n = 8;
 reg [n-1:0] R;
-reg L, w, Clock;
+reg E, L, w, Clock;
 wire [n-1:0] Q;
 integer i;
 
-shiftn shifter(.R(R),
+shiftlne shifter(.R(R),
                .L(L),
                .w(w),
                .Clock(Clock),
-               .Q(Q));
+               .Q(Q),
+               .E(E));
 	defparam shifter.n = n;
 initial
 begin
 Clock = 0;
 L = 1;
 w = 1;
+E = 0;
+// Will only load R into Q until E is turned on.
+// When E is turned on, Shifting is allowed to happen, but only when L is turned off
+// If L and E are both on, then R will load into Q, but no shifting will occur
     for (i = 0; i < 256; i = i + 1)
     begin
     	#2 R = i;
+      #2 E = 1;
     	#2 L = 1;
     	#2 Clock = ~Clock;
     	#2 Clock = ~Clock;

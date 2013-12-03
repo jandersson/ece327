@@ -6,7 +6,7 @@
 //             []shiftlne module
 //	TEST: [x]downcount module
 //		  [x]muxdff module 
-//		  []regne module
+//		  [x]regne module
 //        []shiftlne module				
 
 
@@ -162,7 +162,7 @@ always @(posedge Clock)
 
 endmodule
 
-module shiftln(R, L, w, Clock, Q);
+module shiftlne(R, L, w, Clock, Q, E);
 // Figure 5.51 on page 298
 // modified to shift left instead of right
 // R: Data from input stream
@@ -174,16 +174,18 @@ module shiftln(R, L, w, Clock, Q);
 
 	parameter n = 8;
 	input [n-1:0] R;
-	input L, w, Clock;
+	input L, w, Clock, E;
 	output [n-1:0] Q;
 	reg [n-1:0] Q;
 	integer k;
 	initial begin Q = 0; end
 
 	always @(posedge Clock)
+		
+
 		if(L == 1)
 			Q <= R;
-		else
+		else if (E == 1)
 		begin
 			for (k = 0; k < n - 1; k = k + 1)
 				Q[k+1] <= Q[k];
@@ -191,17 +193,17 @@ module shiftln(R, L, w, Clock, Q);
 		end
 endmodule
 
-module regne (R, Clock, Resetn, E, Q)
+module regne (R, Clock, Resetn, E, Q);
 // Figure 5.58 on page 302
 // An n-bit register with an enable input
 
 parameter n = 8;
-input [n-1:0] R:
+input [n-1:0] R;
 input Clock, Resetn, E;
 output [n-1:0] Q;
 reg [n-1:0] Q;
 
-always @(posedge Clock, negedge Resetn)
+always @(posedge Clock or negedge Resetn)
 	if (Resetn == 0)
 		Q <= 0;
 	else if (E == 1)
